@@ -66,6 +66,15 @@ Known Issues:
 		if (percent_strong > percent_weak && percent_strong > percent_mid) {
 			resultsLocation.innerHTML = "You show strong symptoms of ADHD."
 		}
+		if (percent_weak === percent_strong) {
+			resultsLocation.innerHTML = "You show mild symptoms of ADHD."
+		}
+		if (percent_weak === percent_mid) {
+			resultsLocation.innerHTML = "You show weak to mild symptoms of ADHD."
+		}
+		if (percent_mid === percent_strong) {
+			resultsLocation.innerHTML = "You show mild to strong symptoms of ADHD."
+		}
 		
 	}
 
