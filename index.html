@@ -66,14 +66,17 @@ Known Issues:
 		if (percent_strong > percent_weak && percent_strong > percent_mid) {
 			resultsLocation.innerHTML = "You show strong symptoms of ADHD."
 		}
-		if (percent_weak === percent_strong) {
+		if (percent_weak === percent_strong && percent_weak > percent_mid) {
 			resultsLocation.innerHTML = "You show mild symptoms of ADHD."
 		}
-		if (percent_weak === percent_mid) {
+		if (percent_weak === percent_mid && percent_weak > percent_strong) {
 			resultsLocation.innerHTML = "You show weak to mild symptoms of ADHD."
 		}
-		if (percent_mid === percent_strong) {
+		if (percent_mid === percent_strong && percent_mid > percent_weak) {
 			resultsLocation.innerHTML = "You show mild to strong symptoms of ADHD."
+		}
+		if (percent_mid === percent_strong && percent_strong === percent_weak) {
+			resultsLocation.innerHTML = "You show mild symptoms of ADHD."
 		}
 		
 	}
@@ -129,7 +132,7 @@ Known Issues:
 		<p>How often do you struggle to wait in line or wait for someone to finish speaking?</p> <!--I asked the question for Question 1 (Q1) here.-->  
 		<a href="#two" onclick="weakAdd();" class="w3-btn w3-blue"> Never </a>
 		<a href="#two" onclick="midAdd();" class="w3-btn w3-blue"> Sometimes </a> 
-		<a href="#two" onclick="strongAdd();" class="w3-btn w3-blue"> Always </a> <!-- Create No (Itchy) button for Q1. If clicked, adds one to cold_count-->
+		<a href="#two" onclick="strongAdd();" class="w3-btn w3-blue"> Often </a> <!-- Create No (Itchy) button for Q1. If clicked, adds one to cold_count-->
 	</div>
 </div>
 	
@@ -141,9 +144,9 @@ Known Issues:
 	
 	<div id="content" class="w3-container"> <!--creating the question and buttons for Q2-->
 		<p>How often do you struggle to stay organized?</p> <!--I asked the question for Q2 here.--> 
-		<a href="#three" onclick="weakAdd();" class="w3-btn w3-blue"> Never </a>
+		<a href="#three" onclick="weakAdd();" class="w3-btn w3-blue"> Rarely </a>
 		<a href="#three" onclick="midAdd();" class="w3-btn w3-blue"> Sometimes </a> 
-		<a href="#three" onclick="strongAdd();" class="w3-btn w3-blue"> Always </a> <!-- Create No button for Q2. If clicked, adds one to allergy_count-->
+		<a href="#three" onclick="strongAdd();" class="w3-btn w3-blue"> Often </a> <!-- Create No button for Q2. If clicked, adds one to allergy_count-->
 	</div>
 </div>	
 	
@@ -155,9 +158,9 @@ Known Issues:
 
 	<div id="content" class="w3-container"> <!--creating the question and buttons for Q3-->
 		<p>How often do you find yourself easily distracted by outside sources?</p> <!--I asked the question for Q3 here.--> 
-		<a href="#four" onclick="weakAdd();" class="w3-btn w3-blue"> Never </a>
+		<a href="#four" onclick="weakAdd();" class="w3-btn w3-blue"> Rarely </a>
 		<a href="#four" onclick="midAdd();" class="w3-btn w3-blue"> Sometimes </a> 
-		<a href="#four" onclick="strongAdd();" class="w3-btn w3-blue"> Always </a> <!-- Create No button for Q3. If clicked, adds one to allergy_count-->
+		<a href="#four" onclick="strongAdd();" class="w3-btn w3-blue"> Often </a> <!-- Create No button for Q3. If clicked, adds one to allergy_count-->
 	</div>
 </div>
 	
@@ -169,9 +172,9 @@ Known Issues:
 
 	<div id="content" class="w3-container">
 		<p>How often do you find yourself fidgeting or squirming?</p> <!--I asked the question for Q4 here.--> 
-		<a href="#five" onclick="weakAdd();" class="w3-btn w3-blue"> Never </a>
+		<a href="#five" onclick="weakAdd();" class="w3-btn w3-blue"> Rarely </a>
 		<a href="#five" onclick="midAdd();" class="w3-btn w3-blue"> Sometimes </a> 
-		<a href="#five" onclick="strongAdd();" class="w3-btn w3-blue"> Always </a> <!-- Create No (Chronic) button for Q4. If clicked, adds one to cold_count-->
+		<a href="#five" onclick="strongAdd();" class="w3-btn w3-blue"> Often </a> <!-- Create No (Chronic) button for Q4. If clicked, adds one to cold_count-->
 	</div>
 </div>
 
@@ -183,9 +186,9 @@ Known Issues:
 
 	<div id="content" class="w3-container">
 		<p>How often do you find yourself struggling to pay attention to someone talking? </p> <!--I asked the question for Q5 here.-->
-		<a href="#six" onclick="weakAdd();" class="w3-btn w3-blue"> Never </a>
+		<a href="#six" onclick="weakAdd();" class="w3-btn w3-blue"> Rarely </a>
 		<a href="#six" onclick="midAdd();" class="w3-btn w3-blue"> Sometimes </a> 
-		<a href="#six" onclick="strongAdd();" class="w3-btn w3-blue"> Always </a> <!-- Create No button for Q5. If clicked, adds one to cold_count-->
+		<a href="#six" onclick="strongAdd();" class="w3-btn w3-blue"> Often </a> <!-- Create No button for Q5. If clicked, adds one to cold_count-->
 	</div>
 </div>
 
@@ -197,9 +200,9 @@ Known Issues:
 
 	<div id="content" class="w3-container"> <!-- creating the content for Q6-->
 		<p>How often do you struggle to hold your attention on activities or tasks?</p> <!--I asked the question for Q6 here.-->
-		<a href="#seven" onclick="weakAdd();" class="w3-btn w3-blue"> Never </a>
+		<a href="#seven" onclick="weakAdd();" class="w3-btn w3-blue"> Rarely </a>
 		<a href="#seven" onclick="midAdd();" class="w3-btn w3-blue"> Sometimes </a> 
-		<a href="#seven" onclick="strongAdd();" class="w3-btn w3-blue"> Always </a> <!-- Create Yes button for Q6. If clicked, adds one to allergy_count-->
+		<a href="#seven" onclick="strongAdd();" class="w3-btn w3-blue"> Often </a> <!-- Create Yes button for Q6. If clicked, adds one to allergy_count-->
 	</div>
 </div>
 
